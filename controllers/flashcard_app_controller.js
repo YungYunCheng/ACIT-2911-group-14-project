@@ -1,3 +1,4 @@
+// Placeholder "Database"
 let data = [{title: "Test Card", desc: "This is just a test", id: 1}]
 
 let listAll = (req, res) => {
