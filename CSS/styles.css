@@ -3,14 +3,16 @@
 }
 
 .nav {
-    display:block;
-    text-align: right;
-    align-items: right;
+    display: flex;
+    justify-content: end;
+    align-items: end;
 }
 
-.nav > ul {
+.nav ul {
+    display: flex;
     list-style-type: none;
-    padding: .5rem;
+    margin-top: 0;
+    padding-left: 2rem;
 }
 
 h1 {
