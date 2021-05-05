@@ -1,0 +1,97 @@
+* {
+    color: #57526b;
+}
+
+.nav {
+    display:block;
+    text-align: right;
+    align-items: right;
+}
+
+.nav > ul {
+    list-style-type: none;
+    padding: .5rem;
+}
+
+h1 {
+    color: black;
+    text-align: center;
+}
+
+.cardArea{
+    width: 600px;
+    height: 400px;
+    margin: auto;
+    margin-top: 50px;
+    border: 3px solid black;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.buttonArea{
+    margin: auto;
+    display: block;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    overflow: hidden;
+}
+
+.previousButton{
+    width:80px;
+    text-align:center;
+    font-size:20px;
+    padding:10px;
+    cursor:pointer;
+    color:white;
+    margin:auto;
+    margin-top:30px;
+    background-color:#cf4848;
+    border: 2px solid #b30a0a;
+    border-radius:5px;
+}
+
+.createButton{
+    width:80px;
+    text-align:center;
+    font-size:20px;
+    padding:10px;
+    cursor:pointer;
+    color:white;
+    margin:auto;
+    margin-top:30px;
+    background-color:#0c8046;
+    border: 2px solid #046625;
+    border-radius:5px;
+}
+
+.nextButton{
+    width:80px;
+    text-align:center;
+    font-size:20px;
+    padding:10px;
+    cursor:pointer;
+    color:white;
+    margin:auto;
+    margin-top:30px;
+    background-color:#1c50e0;
+    border: 2px solid #072ca7;
+    border-radius:5px;
+}
+
+footer > p {
+    background-color: #31748f;
+    color: #ffffff;
+    margin: 0;
+    padding: 16px;
+    text-align: center;
+}
+
+@media screen and (min-width: 640px) {
+    .shop-item {
+        flex: 33.33%;
+        margin: 1rem;
+    }
+}
