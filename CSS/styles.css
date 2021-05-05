@@ -24,7 +24,7 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     align-items: space-around;
-    width: 100%;
+    width: 100vw;
 }
 
 .cardContent{
@@ -41,9 +41,9 @@ h1 {
 .buttonArea{
     display: flex;
     flex-wrap: wrap;
-    align-items: space-around;
+    align-items: center;
     margin: auto;
-    position: absolute;
+    position: relative;
     top: 50%;
     left: 50%;
     overflow: hidden;
@@ -100,5 +100,5 @@ footer > p {
 }
 
 @media screen and (min-width: 640px) {
-    
+
 }
