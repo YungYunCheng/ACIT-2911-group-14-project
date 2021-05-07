@@ -45,7 +45,8 @@ h1 {
 .buttonArea{
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    width: 100vw;
+    text-align: center;
     align-items: center;
     margin: auto;
     position: relative;
