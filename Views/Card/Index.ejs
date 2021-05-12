@@ -6,7 +6,7 @@
 <% for(var i=0; i < cards.length; i++) { %>
     <tr>
       <td><b>Card Title:</b><%= cards[i].title %></td>
-      <td><a href='/Card/Detail?title=<%= cards[i].title %>'>Detail</a></td>
+      <td><a href=<%='/Card/Detail/' + cards[i].id %>>Detail</a></td>
     </tr>
  <% } %>
 </table>

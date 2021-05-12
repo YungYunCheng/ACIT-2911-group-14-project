@@ -20,16 +20,42 @@ let Create = (req, res) => {
 }
 
 let Detail = (req, res) => {
-    let cardTitle = req.query.title;
+    // Uses flashcard id to make it easier for myself :)
+    let cardId = req.params.id;
 
     let cardInfo = "placeholder"
 
     for (i in database){
-        if (database[i].title = cardTitle){
+        if (database[i].id === parseInt(cardId)){
+            cardInfo = database[i]
+        }
+    }
+)
+
+    // Fixed the redirect part
+    if (cardInfo === "placeholder"){
+        res.render('Card/Index', {cards:database});
+    } else {
+        res.render('Card/Detail', {cards:cardInfo});
+    }
+}
+
+let Delete = (req, res) => {
+    let cardId = req.params.id;
+
+    let cardInfo = "placeholder"
+
+    for (i in database){
+        if (database[i].id === parseInt(cardId)){
             cardInfo = database[i]
         }
     }
 
-    res.render('Card/Detail', {cards:cardInfo})
+    if (cardInfo !== "placeholder"){
+        database.splice(database[i], 1)
+    }
+
+    res.render('Card/Index', {cards:database})
 }
-module.exports = {database, Index, CreateCard, Create, Detail}
+
+module.exports = {database, Index, CreateCard, Create, Detail, Delete}

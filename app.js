@@ -24,12 +24,7 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
  
 
-//app.set('view engine', 'handlebars');
- 
-// That line is to specify a directory where you could 
-// link to static files (images, CSS, etc.). 
-// So if you put a style.css file in that directory and you 
-// could link directly to it in your view <link href=”style.css” rel=”stylesheet”>
+// Sets the folder where the static content go into
 app.use(express.static(path.join(__dirname, 'public')));
  
 http.createServer(app).listen(app.get('port'), function(){
