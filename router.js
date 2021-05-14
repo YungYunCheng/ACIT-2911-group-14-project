@@ -11,4 +11,6 @@ module.exports = function(app){
     // I changed the /Detail to be connected to an id instead of a title
     app.get('/Card/Detail/:id', CardController.Detail);
     app.post('/Card/Detail/:id/Delete', CardController.Delete);
+    app.get('/Card/Detail/:id/Edit', CardController.Edit);
+    app.post('/Card/Update/:id', CardController.Update)
 };
