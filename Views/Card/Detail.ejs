@@ -1,13 +1,12 @@
 <% layout('../layouts/mainlayout.ejs') -%>
 <br/><br/>
-<h1>Flash Card Detail</h1>
+<b>Flash Card Detail</b>
 
-<h2>Title:</h2> <%= cards.title %>  <br/>
-<h2>Context:</h2> <%= cards.context %>
+<b>Title:</b> <%= cards.title %>  <br/>
+<b>Context:</b> <%= cards.context %>
 
-<br/><br/>
 <!-- Created a button that links to the delete function -->
-<form  method="POST" action=<%= cards.id + "/Delete" %>>
+<form  method="GET" action=<%= cards.id + "/Delete" %>>
 <button type="submit">Delete</button>
 </form>
 

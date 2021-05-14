@@ -30,15 +30,16 @@ it("Creates a flashcard, checks database to see if it exists.", async() => {
 
 it("Edits a flashcard, checks database to see if it exists.", async() => {
     await supertest(app)
-        .post("/Card/Edit?title=Test%20Card")
+        .post("/Card/Update/1")
         .send(fakeCard)
     
-    expect(CardController.database[1]).toBe(fakeCard)
+    expect(CardController.database[1].title).toBe("test card")
 })
 
 it("Deletes a flashcard, checks database to see if it exists.", async() => {
     await supertest(app)
-        .delete("Card/Delete")
+        .get("/Card/Detail/1/Delete")
+        .expect(200)
     
-    expect(CardController.database.length).toBe(0)
+    expect(CardController.database.length).toBe(1)
 })
