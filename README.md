@@ -1,5 +1,7 @@
-# Agile_project_version01
+# Agile_project_version02
+Final Sprint 2
 
-I'm using mongoDB
 
-Database name: AgileDB
+Database: Json file
+Function: Create, Edit, Detail, Delete
+Styling with CSS: 
