@@ -4,7 +4,7 @@ const CardController = require("../Controllers/CardController")
 const { it } = require('@jest/globals');
 
 const fakeCard = {
-    title: "test card",
+    title: "a test card",
     context: "This is a test"
 }
 
@@ -28,12 +28,12 @@ it("Creates a flashcard, checks database to see if it exists.", async() => {
     expect(CardController.database.length).toBe(2)
 })
 
-it("Edits a flashcard, checks database to see if it exists.", async() => {
+it("Edits a flashcard, checks database to see if it changed.", async() => {
     await supertest(app)
         .post("/Card/Update/1")
         .send(fakeCard)
     
-    expect(CardController.database[1].title).toBe("test card")
+    expect(CardController.database[1].title).toBe("a test card")
 })
 
 it("Deletes a flashcard, checks database to see if it exists.", async() => {
