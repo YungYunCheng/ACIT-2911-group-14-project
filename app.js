@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 var express = require('express');
 var http    = require('http');
 var path    = require('path');
@@ -32,3 +33,20 @@ http.createServer(app).listen(app.get('port'), function(){
 });
 
 module.exports = app
+=======
+const express = require("express");
+const path = require("path");
+const flashcardsController = require("./controllers/flashcard_app_controller");
+
+const app = express();
+
+app.use(express.static(path.join(__dirname, "public")));
+app.set("view engine", "ejs");
+
+app.get("/flashcards", flashcardsController.listCards);
+app.get("/flashcards/add", flashcardsController.addCard);
+
+app.listen(5000, () => {
+    console.log("Server is now running. To visit: localhost:5000");
+});
+>>>>>>> 12f42b4a3fb72206e5dc5deb65e6ce4d991a57ed
