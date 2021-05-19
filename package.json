@@ -1,7 +1,7 @@
 {
     "scripts": {
-        "test": "jest",
-        "start": "node app.js"
+        "start": "node app.js",
+        "test": "jest"
     },
     "dependencies": {
         "ejs": "^3.1.6",
