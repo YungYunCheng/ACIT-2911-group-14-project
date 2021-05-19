@@ -14,8 +14,7 @@ let getCard = (cardId) => {
 }
 
 let Index = (req, res) => {
-    res.render("Card/Index", {cards: database})
-    res.status(200)
+    res.status(200).render("Card/Index", {cards: database})
 }
 
 let CreateCard = (req, res) => {
@@ -55,8 +54,7 @@ let Delete = (req, res) => {
         database.splice(database[i], 1)
     }
 
-    res.render('Card/Index', {cards:database})
-    res.status(200)
+    res.status(200).render('Card/Index', {cards:database})
 }
 
 let Edit = (req, res) => {
