@@ -15,6 +15,7 @@ let getCard = (cardId) => {
 
 let Index = (req, res) => {
     res.render("Card/Index", {cards: database})
+    res.status(200)
 }
 
 let CreateCard = (req, res) => {
@@ -55,6 +56,7 @@ let Delete = (req, res) => {
     }
 
     res.render('Card/Index', {cards:database})
+    res.status(200)
 }
 
 let Edit = (req, res) => {
